@@ -1,13 +1,13 @@
 class FlagsModel extends \CodeIgniter\Model
 {
 
-        protected $table      = 'dwarfs';
+        protected $table      = 'flags';
         protected $primaryKey = 'id';
 
 		protected $returnType = 'array';
         protected $useSoftDeletes = true;
 
-        protected $allowedFields = ['name', 'role'];
+        protected $allowedFields = ['meaning'];
 
         protected $useTimestamps = false;
 

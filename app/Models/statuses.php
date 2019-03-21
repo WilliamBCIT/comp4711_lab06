@@ -1,13 +1,13 @@
 class StatusesModel extends \CodeIgniter\Model
 {
 
-        protected $table      = 'dwarfs';
+        protected $table      = 'statuses';
         protected $primaryKey = 'id';
 
 		protected $returnType = 'array';
         protected $useSoftDeletes = true;
 
-        protected $allowedFields = ['name', 'role'];
+        protected $allowedFields = ['name'];
 
         protected $useTimestamps = false;
 

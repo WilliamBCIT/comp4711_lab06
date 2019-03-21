@@ -1,13 +1,13 @@
 class TasksModel extends \CodeIgniter\Model
 {
 
-        protected $table      = 'dwarfs';
+        protected $table      = 'tasks';
         protected $primaryKey = 'id';
 
 		protected $returnType = 'array';
         protected $useSoftDeletes = true;
 
-        protected $allowedFields = ['name', 'role'];
+        protected $allowedFields = ['task', 'priority', 'size', 'group', 'deadline', 'status', 'flag'];
 
         protected $useTimestamps = false;
 
