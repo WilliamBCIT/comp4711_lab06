@@ -13,17 +13,17 @@ class Chores extends Controller
 			foreach ($results as $row)
 			{
 					echo $row->name;
-					
+					assign(name);
 			}
 
         }
 
-		public function assign()
+		public function assign(string $string)
 		{
 			
-			$xmldata;
+			$xmldata = $string;
 			
-			$info = new SimpleXMLElement($xmldata)
+			$info = new SimpleXMLElement($xmldata);
 
 		}
 		
