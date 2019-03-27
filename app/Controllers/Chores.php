@@ -1,30 +1,45 @@
 <?php namespace App\Controllers;
 
 use CodeIgniter\Controller;
+use App\Models\DwarfsModel
 
 class Chores extends Controller
 {
         public function index()
         {
 
-			$query = $db->query('SELECT name, id FROM dwarfs');
-			$results = $query->getResult();
-
-			foreach ($results as $row)
-			{
-					echo $row->name;
-					assign(name);
-			}
+		    $dwarfs = new DwarfsModel(); 
+		
+		    //return view from dwarfs
+		    $data = $dwarfs->findAll();
+		
+		    //call assign function from the DwarfsView
+            return view("DwarfsView", $data);		
 
         }
 
-		public function assign(string $string)
+		public function assign(string $id)
 		{
 			
-			$xmldata = $string;
+			$xmldata = new SimpleXMLElement("<todo/>");
 			
-			$info = new SimpleXMLElement($xmldata);
+			//Add 3 children to simpleXMLelement
+			
+			//retrieve dwarf record for given $id
+			//use to build simpleXMLelement
+			
+			$chores = $xmldata->addChild("chores");
+			$name = $xmldata->addChild("name");
+			$roles = $xmldata->addChild("roles");
 
+			//return XML doc with 3 random chores for dwarfs
+			//3 elements: name, role, 3 chores
+			//From Task model
+			
+			$this->response->setContentType("text/xml");
+			
+		    return $xmldata->asXML();
+		
 		}
 		
 		}
