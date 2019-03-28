@@ -1,9 +1,9 @@
-<?php namespace App\Controllers;
+<?php 
+namespace App\Controllers;
 
-use CodeIgniter\Controller;
-use App\Models\DwarfsModel
+use App\Models\DwarfsModel;
 
-class Chores extends Controller
+class Chores extends \CodeIgniter\Controller
 {
         public function index()
         {
