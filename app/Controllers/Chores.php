@@ -13,12 +13,14 @@ class Chores extends \CodeIgniter\Controller
 		    $dwarfs = new DwarfsModel(); 
 		
 		    //return view from dwarfs
-		    $data = $dwarfs->findAll();
-		
+		    //$data = $dwarfs->findAll();
+					
 		    //call assign function from the DwarfsView
-            return view("DwarfsView", $data);		
+            //return view("DwarfsView", $data);		
 
-        }
+            return view("DwarfView");		
+
+			}
 
 		public function assign(string $id)
 		{

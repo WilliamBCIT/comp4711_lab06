@@ -9,11 +9,11 @@
 	 <h3>Dwarves</h3>
 
         <ul>
-        <?php foreach ($data as $item):?>
+        <?php// foreach ($data as $item):?>
 
-                <li><?= $item ?></li>
+                <li><?//= $item ?></li>
 
-        <?php endforeach;?>
+        <?php// endforeach;?>
         </ul>
 	
 </body>
