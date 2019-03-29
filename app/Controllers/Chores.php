@@ -1,7 +1,9 @@
 <?php 
+
 namespace App\Controllers;
 
 use App\Models\DwarfsModel;
+use CodeIgniter\Controller;
 
 class Chores extends \CodeIgniter\Controller
 {
